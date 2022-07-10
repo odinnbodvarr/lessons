@@ -40,7 +40,7 @@ body {
 
 main,
 footer {
-    max-width: 1024px;
+    /* max-width: 1024px; */
     margin: 20px;
     display: flex;
     flex-direction: column;
