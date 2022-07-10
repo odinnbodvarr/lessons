@@ -139,3 +139,11 @@ td {
     width: 100%;
     background-color: #f3faff;
 }
+
+figure img {
+    height: 600px;
+}
+
+.setting-image {
+    max-width: 1000px;
+}
