@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Concert One', cursive;
     align-items: center;
     justify-content: space-between;
     height: 100vh;
@@ -27,16 +27,14 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 7px;
     height: 100px;
-    border-left: 2px solid #EA4E22;
     border-radius: 20px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #ffffff;
-    border-radius: 20px;
     height: 100px;
+    background-color: #ed8061;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -48,7 +46,7 @@ body {
 h2,
 h3 {
     color: #DF4446;
-    margin: 20px;
+    margin: 10px;
 }
 
 header {
@@ -145,6 +143,10 @@ a {
     font-weight: bold;
 }
 
+a:hover {
+    color: #ff0000;
+}
+
 table {
     background-color: #ffffff;
     border: #DF4446 solid 5px;
@@ -164,6 +166,39 @@ td {
 
 .tools-main img {
     width: 100%;
+}
+
+.plugin-vs-image {
+    width: 265px !important;
+}
+
+.post-img {
+    margin: 20px;
+    text-align: center;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.code-post {
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 10px;
+    background-color: #ea4d22;
+    color: #ffffff;
+}
+
+strong {
+    color: #DF4446;
+}
+
+.html-1-desc {
+    display: flex;
+    justify-content: center;
+}
+
+.html-1-desc img {
+    max-width: 100%;
 }
 
 /* figure img {
