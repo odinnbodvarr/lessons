@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Concert+One&family=Fredoka+One&family=Gruppo&family=Lilita+One&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Профессия Frontend-разработчик - 2. GIT и GITHUB</title>
+</head>
+
+<body>
+    <header>
+        <h1>2. GIT и GitHub</h1>
+    </header>
+    <main>
+        <h2>Что такое Git и GitHub?</h2>
+        <p> <strong> Git</strong> — это система контроля версий, позволяющая эффективно управлять историей исходного
+            кода. Любые изменения,
+            которые ты вносишь в проект могут быть сохранены с помощью Git. Ты можешь вернуться к любым ранее
+            сохраненным версиям. Без Git пришлось бы создавать копии проекта, что было бы проблемой при увеличении
+            объема кода в приложении. На текущий момент Git — стандарт для разработки.</p>
+        <p><strong>GitHub</strong> можно считать соцсетью для хранения кода. Здесь вы можете попрактиковаться в
+            разработке и
+            придумать что-то свое, найти множество open-source проектов, передовых технологий, различных функций и
+            дизайнов.</p>
+        <p>На GitHub вы учитесь и участвуете в других проектах, храните код для работы или учебы, берете код других
+            проектов и вникаете во все детали. А еще вы можете создавать сайты бесплатно напрямую из репозитория.
+        </p>
+
+        <p>Для начинающих может быть непонятна разница между этими терминами. <br>
+            <strong>Git</strong> — система контроля версий. Технология, которую можно скачать на компьютер. <br>
+            <strong>Github</strong> — сервис, который позволяет работать с твоими Git проектами. Это называется
+            репозитории. Помимо
+            Github существуют другие сервисы (например Bitbucket, GitLab).
+        </p>
+        <p><strong>Git Bash</strong>. Это программой мы будем постоянно пользоваться, поэтому лучше скопировать эту
+            программу в доступное
+            место или же закрепить на панели задач (я рекомендую закрепить на панели задач).</p>
+        <p><strong>Git Bash</strong> работает по принципу указания пути к файлу. Этим же принципом работают хостинги
+            и сервера.
+            Допустим у нас есть в папка <strong>“New Folder”</strong> в рабочем столе. Если мы зайдём на свойства этой
+            папки, в
+            разделе <strong>Общие</strong> посмотрим строку <strong>Расположение</strong> то увидим там примерно
+            следующее
+            <strong>C:\Users\Username\Desktop</strong>.
+            Это означает, что ваша папка находится в папке <strong>Desktop</strong>, которая в свою очередь находится в
+            папке
+            <strong>Username</strong>, которая находится в папке <strong>Users</strong> и которая находится в <strong>
+                диске C</strong>.
+            Обычный юзер,
+            чтобы войти в эту
+            папку, заходит в <strong>Мой компьютер > Диск С > Users > Username > Рабочий стол (Desktop)</strong>. Но мы
+            уже
+            программисты и поэтому начиная с этого момента, чтобы войти, копировать, переместить, создать и т.д.
+            файлы, будем пользоваться командами и терминалом <strong>Git Bash</strong>.</p>
+        <p>В отличие от <strong>Windows</strong> в терминале, чтобы войти в папку <strong>Desktop</strong> мы не
+            начинаем с <strong>C</strong>.
+            <strong>/c/Users/"Username"/</strong> заменяем символом <code><strong>~</strong></code> потом ставим
+            <strong>/</strong>
+            (косую черту), а дальше пишем
+            <strong>Desktop</strong>. <br>
+            Пример: <br>
+            <p class="code-post">~/Desktop</p>
+            <h2>Перемещение по репозиториям</h2>
+            <p>Чтобы перемешаться, пользуемся командой <strong>cd</strong>. <br>
+                Пример:
+            </p>
+            <p>
+                Чтобы переместиться в <strong>Рабочий стол</strong>, пишем следующую команду
+            </p>
+            <p class="code-post">
+                cd ~/Desktop
+            </p>
+            <p class="html-1-desc">
+                <img src="../img/git_github/screen_1.png" alt="Screen Git Bash">
+            </p>
+        </p>
+        <p>Чтобы узнать, где мы находимся, пользуемся командоц <strong>pwd</strong>.</p>
+        <p>Пример: <br>
+            Переместившись в <strong>Рабочий стол</strong>, я хочу узнать где я нахожусь. Пишу команду
+            <strong>pwd</strong>.
+        </p>
+        <p class="html-1-desc">
+            <img src="../img/git_github/screen_2.png" alt="Screen Git Bash">
+        </p>
+        <p>
+            Обычный юзер, когда находится в какой-либо папке, видит то, что в ней находится. Чтобы нам, программистам,
+            узнать через терминал, что находится в папке, в которой мы находим, пишем команду <strong>ls</strong>.
+        </p>
+        <p>Пример: <br>
+            Обычный юзер зашёл в <strong>Рабочий стол</strong> и открыл там обычную папку <strong>Folders</strong> и
+            видит, что в ней
+            находятся еще 5
+            папок.
+        </p>
+        <p class="html-1-desc">
+            <img src="../img/git_github/screen_3.png" alt="Screen Git Bash">
+        </p>
+        <p>Программист же находясь в папке <strong>Desktop</strong> (в рабочем столе) набирает команду
+            <strong> cd Folders</strong> и переходит в папку <strong>Folders</strong>. Затем набрав команду
+            <strong>ls</strong> и
+            терминал выдаёт ему
+            название папок,
+            которые находятся в этой папке.
+        </p>
+        <p class="html-1-desc">
+            <img src="../img/git_github/screen_4.png" alt="Screen Git Bash">
+        </p>
+        <p>Чтобы узнать детальную информацию о файлах и папках находящихся в данной папке, надо набрать команду <br>
+            <strong>ls -l</strong>.
+            В этом случае выходит информация о том когда эти файлы создавались или изменялись в последний раз.
+        </p>
+        <p class="html-1-desc">
+            <img src="../img/git_github/screen_5.png" alt="Screen Git Bash">
+        </p>
+        <blockquote>
+            <h3>ВОПРОС:</h3>
+            <p>Я нахожусь в папке <strong>Folders</strong>. Мне надо перейти в папку <strong>Folder 2</strong>, которая
+                находится в папке <strong>Folder 1</strong>, которая в свою очередь находится в папке
+                <strong>Folders</strong> (В той папке, которой я нахожусь). Ответ пришлите мне в личку. (Примечание:
+                чтобы
+                обозначить папку, в которой вы находитесь, надо поставить точку. Пример: <strong>./user/folder</strong>
+                )
+                Если в название файла присутствует пробел, то пишем название в кавычках. <br>
+                <strong>Ответ напишите в комментариях.</strong> </p>
+        </blockquote>
+        <p>Ранее я указал, что чтобы начать с папки, в которой я нахожусь, надо поставить точку. Но чтобы
+            перейти назад, в папку с которого я перешёл в эту папку, то пользуемся двумя точками. Допустим, я нахожусь в
+            папке <strong>Folder 2 </strong>, которая в свою очередь находится в папке
+            <strong>Folder</strong>. Мне надо перейти в папку <strong>Folder 1</strong> , а потом уже перейти в папку
+            <strong>Folder
+                3</strong>,
+            которая также
+            находится в
+            папке <strong>Folder 1</strong>. <br> Для этого пишем следующую команду:</p>
+        <p class="code-post">cd ../"Folder 3"</p>
+        <p class="html-1-desc">
+            <img src="../img/git_github/screen_6.png" alt="Screen Git Bash">
+        </p>
+        <p>C помощью <strong>..</strong> (двух точек) мы переходим на одну папку назад, а потом уже в этой папке
+            поставим <strong>/</strong> и указав
+            название папки мы переходим на эту папку. </p>
+        <blockquote>
+            <h3>ВОПРОС:</h3>
+            <p>
+                Я нахожусь в папке <strong>Folder 2</strong>. Путь у папки такой
+                <strong><code>~</code>/Desktop/Folders/Folder
+                    1/Folder 2</strong>
+                Теперь мне надо перейти в папку <strong>Folders</strong> , затем перейти в папку <strong>Folder
+                    2</strong>, которая
+                находится в <strong>Folders</strong>,
+                а дальше перейти уже в папку <strong>Folder 3</strong>, которая находится в папке <strong>Folder
+                    2</strong>. <br> Т.е. мне
+                надо
+                перейти <br>
+                отсюда <strong><code>~</code>/Desktop/Folders/Folder 1/Folder 2</strong> <br>
+                сюда <strong><code>~</code>/Desktop/Folders/Folder 2/Folder 3</strong>
+
+                <br>
+                <strong>Ответ напишите в комментариях.</strong> </p>
+        </blockquote>
+        <h2>Создание папок</h2>
+        <p>
+            Чтобы создавать новую папку, программисту надо пользоваться командой <strong>mkdir</strong>. <br>
+            Допустим мне надо создать папку <strong>MyName</strong> в папке, в которой я нахожусь. В данном случае я
+            пишу команду
+        </p>
+        <p class="code-post">
+            mkdir ./MyName
+        </p>
+        <p class="html-1-desc">
+            <img src="../img/git_github/screen_7.png" alt="Screen Git Bash">
+        </p>
+        <p>С помощью точки я указываю место, где я нахожусь. А затем пишу название папки. Выше на рисунке вы можете
+            увидеть
+            результат, который я показал с помощью команды <strong>ls -la</strong>. Можно одной командой создать
+            несколько папок. Для
+            этого
+            просто между названиями надо ставить пробел. </p>
+        <blockquote>
+            <h3>ВОПРОС:</h3>
+            <ol>
+                <li>Я нахожусь тут <strong><code>~</code>/Desktop/Folders/A/B</strong><br>
+                    мне надо перейти сюда <strong><code>~</code>/Desktop/Folders</strong> , а затем отсюда <br>
+                    создать папку под названием <strong>E</strong> тут
+                    <strong><code>~</code>/Desktop/Folders/B/A</strong> не переходя
+                    сюда.</li>
+                <li>
+                    Я нахожусь тут <strong><code>~</code>/Desktop/Folders/A/B</strong>, а затем отсюда <br>
+                    создать папку под названием <strong>F</strong> тут<strong>
+                        <code>~</code>/Desktop/Folders/B/A</strong> не переходя
+                    сюда.</li>
+            </ol>
+            <strong>Ответ напишите в комментариях.</strong>
+
+        </blockquote>
+        <h2>Создание файлов</h2>
+        <p>Мы научились создавать папки, а теперь научимся создавать файлы. У каждого файла существует свой тип.
+            Называет этот тип расширением. Увидеть расширения файла мы можем, включив функцию <strong>Расширения имён
+                файлов</strong>.</p>
+        <p>Для этого мы должны зайти в любую папку (как обычный юзер) и сделать следующее. </p>
+        <ol>
+            <li>
+                <p> Кликнуть на Вид </p>
+                <p class="html-1-desc">
+                    <img src="../img/git_github/screen_8.png" alt="Screen Git Bash">
+                </p>
+            </li>
+            <li>
+                <p> Затем кликнуть на Расширения имён файлов </p>
+                <p class="html-1-desc">
+                    <img src="../img/git_github/screen_9.png" alt="Screen Git Bash">
+                </p>
+            </li>
+        </ol>
+        <p>Теперь после названия файлов будет точка, а дальше уже расширение этого файла. Например:</p>
+        <p class="html-1-desc">
+            <img src="../img/git_github/screen_10.png" alt="Screen Git Bash">
+        </p>
+
+        <p>Этим же принципом мы будем пользоваться, при создании файлов. Создавать файлы мы будем с помощью команды
+            <strong>touch</strong>. Мы пишем эту команду, затем пробел, название файла, точку и расширение файла.
+            Пример:</p>
+        <p class="code-post">
+            touch a.docx
+        </p>
+        <p>Чтобы создать несколько файлов, между названиями с расширениями ставим пробел. Пример:</p>
+
+        <p class="code-post">
+            touch a.docx b.html
+        </p>
+
+        <blockquote>
+            <h3>ВОПРОС:</h3>
+            <ol>
+                <li>Я нахожусь тут <strong>~/Desktop/Folders/A/B</strong>,<br>
+                    мне надо перейти сюда <strong> ~/Desktop/Folders/B/C</strong> и создать тут 3 файла, <br> с
+                    названиями
+                    <strong>A</strong> с
+                    расширением
+                    <strong>docx</strong>, <strong>B</strong> с
+                    расширением <strong>html</strong>, <strong>C</strong> с расширением <strong>.css</strong> .</li>
+                <li>Я нахожусь тут <strong><code>~</code>/Desktop/Folders/B/C</strong>,<br> находясь здесь
+                    мне надо создать тут <strong><code>~</code>/Desktop/Folders/A/B</strong> 3 файла,<br> с названиями
+                    <strong>A</strong>
+                    с
+                    расширением
+                    <strong>docx</strong>, <strong>B</strong> с
+                    расширением <strong>html</strong>,
+                    <strong>A</strong> с расширением <strong>.docx</strong> .</li>
+            </ol>
+            <strong>Ответ напишите в комментариях.</strong>
+        </blockquote>
+        <h2>Удаление файлов</h2>
+        <p>Мы научились создавать папки и файлы, сейчас же научимся их удалять. </p>
+        <blockquote>
+            <h3>ОСТОРОЖНО!</h3>
+            <p>Прежде чем удалять файлы, убедитесь, что вы правильно указали путь к файлу и названию файла, т.к.
+                восстановить удалённый через терминал файл не получится. </p>
+        </blockquote>
+
+        <p>Чтобы удалить файл, мы пользуем командой <strong>rm</strong> (от слова remove). Допустим, я хочу удалить файл
+            <strong>A.docx</strong> . В таком случае я пишу команду <strong>rm a.docx</strong> . Пример:
+        </p>
+        <p class="html-1-desc">
+            <img src="../img/git_github/screen_11.png" alt="Screen Git Bash">
+        </p>
+        <p>Я создал 3 файла с разными расширениями. Сейчас я их удалю с помощью команды <strong>rm</strong>.</p>
+        <p class="html-1-desc">
+            <img src="../img/git_github/screen_12.png" alt="Screen Git Bash">
+        </p>
+        <p>Как видите, одной простой командой я удалил сразу несколько файлов. Чтобы удалить папку, мы пользуемся
+            командой <strong>rm -rf</strong>.</p>
+        <p class="html-1-desc">
+            <img src="../img/git_github/screen_13.png" alt="Screen Git Bash">
+        </p>
+        <h2>Перемещение файлов</h2>
+        <p>Теперь научимся перемещать файл из одной папки в другую. Для этого используем команду <strong>git
+                mv</strong>. Например, у нас есть 2 папки
+            <strong>Odin1</strong>, <strong>Odin2</strong>. В папке <strong>Odin1</strong> есть
+            файл <strong>index.html</strong>, а в папке <strong>Odin2</strong> есть файл <strong>index2.html</strong>.
+            Нам надо из папки <strong>Odin1</strong> взять файл <strong>index.html</strong> и переместить в папку
+            <strong>Odin2</strong>. Для этого набираем команду <br><strong>mv ./Odin1/index.html ./Odin2</strong>.
+            <p class="html-1-desc">
+                <img src="../img/git_github/screen_14.png" alt="Screen Git Bash">
+            </p>
+        </p>
+        <p>Чтобы очистить окно с командами, набираем команду <strong>clear</strong>. Если же не хотим удалять, а просто
+            хотим поднять их,
+            то нажимаем <strong>ctrl + l</strong>. Чтобы открыть папку в которой мы находимся в <strong>visual studio
+                code</strong>,
+            набираем команду <strong>code</strong>
+            и пишем рядом точку. Чтобы открыть просто папку, то пишем команду <strong>explorer</strong>. </p>
+        <p>Все команды, которые мы прошли.</p>
+        <ul>
+            <li><strong> pwd </strong>– показывает где я нахожусь.</li>
+            <li><strong> cd </strong>– перемещаемся по директориям.</li>
+            <li><strong> ls, ls -l, ls -la </strong>– показывает, что находится в папке.</li>
+            <li><strong> mkdir </strong>– создаём папку</li>
+            <li><strong> touch </strong>– создаём файл</li>
+            <li><strong> rm </strong>– удаляем файл</li>
+            <li><strong> rm -r </strong>– удаляем папку (я объяснил Вам команду rm -rf, но лучше использовать эту
+                команду)</li>
+            <li><strong> rm </strong>– перемещаем файлы</li>
+            <li><strong> clear </strong>– очищает историю команд</li>
+            <li><strong> code . </strong>или же вместо точки путь – открывает папку в <strong>visual studio</strong>
+            </li>
+            <li><strong> explorer </strong>– открыть папку просто в окне (для мака пишем <strong>open</strong>)</li>
+        </ul>
+        <blockquote>
+            <p>
+                Тут я прошёл основные команды. Более подробно можно прочитать в интернете или же по ссылкам ниже.
+            </p>
+            <h3>Дополнительно:</h3>
+            <ul>
+                <li>Подробнее прочитать можете тут <a target="_blank"
+                        href="https://git-scm.com/book/ru/v2">https://git-scm.com/book/ru/v2</a> и тут <a
+                        target="_blank" href="https://githowto.com/ru">https://githowto.com/ru</a></li>
+                <li>Потренироваться можете тут <a target="_blank" target="_blank"
+                        href="https://linuxjourney.com/">https://linuxjourney.com/</a>, там
+                    выберите русский язык</li>
+            </ul>
+        </blockquote>
+        <blockquote>
+            <h3>Домашнее задание:</h3>
+            <p>Создать одну папку, потом внутри создать еще 4, внутри каждого должны быть по 3 файла с разными
+                расширениями.</p>
+            <strong>Ответ напишите в комментариях.</strong>
+        </blockquote>
+
+    </main>
+    <footer> Все права защищены &copy; 2022 </footer>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
