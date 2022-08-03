@@ -335,7 +335,290 @@
                 расширениями.</p>
             <strong>Ответ напишите в комментариях.</strong>
         </blockquote>
+        <h3>Регистрация в Github</h3>
+        <ol>
+            <li>Открываем страницу <a href="https://github.com/" target="_blank"
+                    rel="noopener noreferrer">https://github.com/</a> и нажимаем там на <strong>Sign Up</strong>
+                <p class="html-1-desc"><img src="../img/git_github/screen_15.png" alt="Sign Up"></p>
+            </li>
+            <li>Вводим свой <strong> Email </strong> и нажимаем <strong> Continue </strong>
+                <p class="html-1-desc"><img src="../img/git_github/screen_16.png" alt="Email"></p>
+            </li>
+            <li>Вводим свой <strong> пароль </strong> и нажимаем <strong> Continue </strong>
+                <p class="html-1-desc"><img src="../img/git_github/screen_17.png" alt="Password"></p>
+            </li>
+            <li>Вводим свой <strong> ник </strong> и нажимаем <strong> Continue </strong>
+                <p class="html-1-desc"><img src="../img/git_github/screen_18.png" alt="Username"></p>
+            </li>
+            <li>Вводим букву <strong> y </strong> и нажимаем <strong> Continue </strong>
+                <p class="html-1-desc"><img src="../img/git_github/screen_19.png" alt="Username"></p>
+            </li>
+            <li>Проходим <strong> верификацию </strong>
+                <p class="html-1-desc"><img src="../img/git_github/screen_20.png" alt="Verify"></p>
+            </li>
+            <li>Вписываем код, который пришёл к нам на <strong> Email </strong>
+                <p class="html-1-desc"><img src="../img/git_github/screen_21.png" alt="Verify"></p>
+            </li>
+        </ol>
+        <p>Готово, теперь у Вас есть аккаунт в Github</p>
 
+        <h2>Создание репозитория</h2>
+        <p>Для cоздания репозитория кликните на кнопку <strong>New repository</strong> справа вверху.
+            <p class="html-1-desc"><img src="../img/git_github/screen_22.png" alt="New repository"></p>
+            На странице создания репозитория <a href="https://github.com/new" target="_blank"
+                rel="noopener noreferrer">https://github.com/new</a> укажите:
+            <p class="html-1-desc"><img src="../img/git_github/screen_23.png" alt="New repository">
+                <ol>
+                    <li>Название репозитория</li>
+                    <li>Описание (можно и не писать)</li>
+                    <li>Настройки видимости (приватный это репозиторий или публичный)</li>
+                </ol>
+            </p>
+        </p>
+
+        <h2>Связать локальный репозиторий с удалённым</h2>
+        <p>Репозиторий в виде папки у вас на компьютере называется локальный репозиторий.
+            Репозиторий, загруженный на GitHub, называется удалённый репозиторий. Есть две пути создания связи
+            локального репозитория с удалённый:
+        </p>
+        <ul>
+            <li>Создать копию существующего локального репозитория в удалённом.</li>
+            <li>Создать копию существующего удалённого репозитория в локальном.</li>
+        </ul>
+        <p>Сначала мы рассмотрим первый вариант. После того мы создаём удадённый репозиторий, там если присмотреться
+            указано, как дальше поступать. Есть ссылка, с которым мы будем работать и дальше инструкция</p>
+        <p class="html-1-desc"><img src="../img/git_github/screen_24.png" alt="Connect repository">
+            <p>И так, допустим мы создали папку <strong>Demo</strong> у нас на <strong>Рабочем столе</strong>. Затем
+                внутри этой папки создали файл с названеием <strong>index.html</strong>. Теперь с помощью терминала
+                заходим в этом папку и нам надо сделать эту папку отслеживаемой. Для этого мы набираем команду</p>
+            <p class="code-post">git init</p>
+            <p>После того как мы это сделаем, рядом появляется надпись <strong>master</strong>. Это означает, что связь
+                создана. Далее мы набираем команду</p>
+            <p class="code-post">git remote add origin ваша_ссылка_на_репозиторий</p>
+            <p>C помощью этой команды, мы создаём связь между локальным репозиторием и удадённым. Затем мы набираем
+                команду</p>
+            <p class="code-post">git status</p>
+            <p>Эта команда показывает нам, что у нас есть один неотслеживаемый файл (он обычно показывает нам его
+                красным).Чтобы Git начал следить за этим файлом, мы набираем команду </p>
+            <p class="code-post">git add .</p>
+            <p>Теперь уже, когда мы наберём команду <strong>git status</strong>, он покажет нам этот файл зелёным, тем
+                самым дав нам знать, что этот файл уже отслеживается. Теперь нам надо закомментировать наш шаг, чтобы в
+                будущем когда мы решим вернуться к этому шагу, мы знали где и как его искать. Для этого мы используем
+                команду </p>
+            <p class="code-post">git commit -m 'Ваш комментарий'</p>
+            <p>И последний шаг, надо отправить все файлы в удалённый репозиторий и для этого мы пишем команду</p>
+            <p class="code-post">git push origin master</p>
+            <p class="html-1-desc"><img src="../img/git_github/screen_25.png" alt="Connect repository "> </p>
+            <p>Теперь, если мы зайдём в наш Github, то увидим, что наши файлы уже там присутствуют.</p>
+            <p class="html-1-desc"><img src="../img/git_github/screen_27.png" alt="Connect repository "> </p>
+            <p>Убедиться в том, что наша папка отслеживается мы можем еще и обычным юзерским способом. Если мы откроем
+                нашу папку, зайдём в вкладку <strong>Вид</strong> и поставим галочку на <strong>Скрытые
+                    элементы</strong>, то увидим папку <strong>.git</strong></p>
+            <p class="html-1-desc"><img src="../img/git_github/screen_26.png" alt="Connect repository "> </p>
+            <h2>Клонирование репозитория на компьютер</h2>
+            <p>
+                Если в удалённым репозитории уже существуют какие то файлы, то рекомендуется вначале его скопировать, а
+                уже потом начать с ним работать. Для этого мы заходим на наш Github, нажимаем на зелёную кнопку
+                <strong>Code</strong> и узнаём ссылку нашего репозитория.
+            </p>
+            <p class="html-1-desc"><img src="../img/git_github/screen_28.png" alt="Clone repository "> </p>
+            <p>Затем, чтобы клонировать файлы этого репозитория и создать связь между удалённым репозиторием и локальным
+                мы набирем команду</p>
+            <p class="code-post">git clone ваша_ссылка_на_репозиторий</p>
+            <p class="html-1-desc"><img src="../img/git_github/screen_29.png" alt="Clone repository "> </p>
+            <p>Если необходимо склонировать себе на компьютер отдельную ветку репозитория, выполните команду</p>
+            <p class="code-post"> git clone ссылка_на_репозиторий -b название_ветки</p>
+            <h2>Загрузка файлов в репозиторий</h2>
+            <p>Загрузить файлы в репозиторий можно как через GitHub, так и через Git. Рассмотрим оба варианта</p>
+            <h3>Через Github</h3>
+            <p>Загрузка файлов в репозиторий через интерфейс GitHub.
+                <ol>
+                    <li>Кликаете на кнопку<strong> Add file</strong> справа вверху</li>
+                    <li>Выбираете <strong>Upload files</strong></li>
+                    <li>В появившееся окно перетягиваете файлы и папки с проектом</li>
+                </ol>
+            </p>
+            <p class="html-1-desc"><img src="../img/git_github/screen_30.png" alt="Clone repository "> </p>
+            <h3>Через Git</h3>
+            <p>Загрузка файлов в репозиторий через Git мы уже ранее рассматривали, но давайте повторим</p>
+            <ul>
+                <li>клонируете репозиторий себе на компьютер. Для этого в <strong>Git Bash</strong> выполняете команду
+                    <strong>git clone ссылка_на_репозиторий</strong></li>
+                <li>перетягиваете в папку репозитория файлы и папки с проектом</li>
+                <li>индексируете изменения. Для этого выполняете команду
+                    <strong>git add .</strong> (с точкой в конце)</li>
+                <li>коммитите изменения. Для этого выполняете команду
+                    <strong>git commit -m "пишете что изменили"</strong></li>
+                <li>загружаете файлы в репозиторий. Для этого выполняете команду
+                    <strong>git push origin main</strong> , здесь <strong>main</strong> - название ветки репозитория, в
+                    которую пушите
+                </li>
+            </ul>
+
+            <p>Хочу еще немного поговорить о комментариях. Напишу вам несколько рекомендаций по комментариям.
+                <ul>
+                    <li>Названия коммитов должны быть согласно <a href="https://www.conventionalcommits.org/en/v1.0.0/"
+                            target="_blank" rel="noopener
+                    noreferrer">гайдлайну</a>.</li>
+                    <li>Должен использоваться <strong>present tense ("add feature" not "added feature")</strong></li>
+                    <li>Должен использоваться <strong>imperative mood ("move cursor to..." not "moves cursor
+                            to...")</strong></li>
+                </ul>
+                <h3>Примеры имен коммитов</h3>
+                <ul>
+                    <li>
+                        <p><strong>init:</strong> - используется для начала проекта/таска. Примеры: </p>
+                        <p class="code-post">
+                            git commit -m 'init: start youtube-task' <br>
+                            git commit -m 'init: start mentor-dashboard task'</p>
+                    </li>
+                    <li>
+                        <p><strong>feat:</strong> - это реализованная новая функциональность из технического задания
+                            (добавил поддержку
+                            зумирования, добавил footer, добавил карточку продукта). Примеры:</p>
+                        <p class="code-post">
+                            git commit -m 'feat: add basic page layout' <br>
+                            git commit -m 'feat: implement search box' <br>
+                            git commit -m 'feat: implement request to youtube API' <br>
+                            git commit -m 'feat: implement swipe for horizontal list' <br>
+                            git commit -m 'feat: add additional navigation button' <br>
+                            git commit -m 'feat: add banner' <br>
+                            git commit -m 'feat: add social links' <br>
+                            git commit -m 'feat: add physical security section' <br>
+                            git commit -m 'feat: add real social icons' </p>
+                    </li>
+                    <li>
+                        <p><strong>fix:</strong> - исправил ошибку в ранее реализованной функциональности. Примеры:</p>
+                        <p class="code-post">
+                            git commit -m 'fix: implement correct loading data from youtube' <br>
+                            git commit -m 'fix: change layout for video items to fix bugs' <br>
+                            git commit -m 'fix: relayout header for firefox' <br>
+                            git commit -m 'fix: adjust social links for mobile'</p>
+                    </li>
+                    <li>
+                        <p><strong>refactor:</strong> - новой функциональности не добавлял / поведения не менял. Файлы в
+                            другие места
+                            положил, удалил, добавил. Изменил форматирование кода (white-space, formatting, missing
+                            semi-colons, etc). Улучшил алгоритм, без изменения функциональности. Примеры:</p>
+                        <p class="code-post">
+                            git commit -m 'refactor: change structure of the project' <br>
+                            git commit -m 'refactor: rename vars for better readability' <br>
+                            git commit -m 'refactor: apply eslint' <br>
+                            git commit -m 'refactor: apply prettier'
+                        </p>
+                    </li>
+                    <li>
+                        <p><strong>docs:</strong> - используется при работе с документацией/readme проекта. Примеры:</p>
+                        <p class="code-post">
+                            git commit -m 'docs: update readme with additional information' <br>
+                            git commit -m 'docs: update description of run() method'</p>
+                    </li>
+                </ul>
+            </p>
+            <h2>Создание веток</h2>
+            <p>Главная ветка репозитория по умолчанию называется <strong>main (раньше master)</strong>.
+                От неё можно создавать другие ветки, от них ещё ветки и т.д.
+                На первых этапах учёбы все ветки создаются исключительно от главной ветки.
+                Перед созданием новой ветки убедитесь, что вы находитесь в главной ветке репозитория.
+                Создать ветку можно как через GitHub, так и через Git. Рассмотрим оба варианта.</p>
+            <h3>Создание ветки через интерфейс GitHub</h3>
+            <p>
+                <ol>
+                    <li>Убедитесь, что вы находитесь в главной ветке репозитория <strong>main (или master)</strong></li>
+                    <li>Кликните на треугольник рядом с названием ветки. В текстовое поле впишите название ветки,
+                        например, <strong>gh-pages</strong></li>
+                    <li>Нажмите на строку <strong>Create branch: gh-pages from main (or from master)</strong>.
+                        Мы создали ветку <strong>gh-pages</strong></li>
+                </ol>
+                <p class="html-1-desc"><img src="../img/git_github/screen_31.png" alt="Create branch"> </p>
+            </p>
+
+            <h3>Создание ветки при помощи Git</h3>
+            <p>
+                <ul>
+                    <li>
+                        <p>Клонируем репозиторий себе на компьютер</p>
+                        <p class="code-post">git clone ссылка_на_репозиторий</p>
+                    </li>
+                    <li>
+                        <p>Находясь в папке репозитория открываем Git Bash и выполняем команду</p>
+                        <p class="code-post">git checkout -b gh-pages</p>
+                        <p>Мы создали ветку <strong>gh-pages</strong> и перешли в неё.</p>
+                    </li>
+                    <li>
+                        <p>Обратите внимание, при создании ветки в неё копируются все файлы той ветки, от которой её
+                            создали.</p>
+                    </li>
+                </ul>
+                <p class="html-1-desc"><img src="../img/git_github/screen_32.png" alt="Create branch"></p>
+                <h2> Создание Pull Request</h2>
+                <p>В ходе выполнения проектов вы чаще всего будете делать <strong>Pull Request</strong> из ветки
+                    разработки в
+                    главную ветку своего репозитория <strong>main</strong> или <strong>master</strong>, а также из ветки
+                    разработки в
+                    ветку <strong>gh-pages</strong>.
+                    <br><strong>Pull Request</strong> создаётся через интерфейс <strong>GitHub</strong>. Для этого
+                    <ul>
+                        <li>выберите ветку разработки</li>
+                        <li>нажмите на вкладку <strong>Pull Request</strong> вверху слева</li>
+                        <li>нажмите на кнопку <strong>New pull request</strong> справа вверху. Такая кнопка
+                            появится если в ветке
+                            разработки есть изменения по сравнению с другой веткой репозитория.укажите из какой ветки
+                            репозитория в какую делаете <strong>Create pull request</strong></li>
+                        <li>укажите из какой ветки репозитория в какую делаете <strong>Pull Request</strong></li>
+                        <li>нажмите на зелёную кнопку внизу <strong>Create pull request</strong>.
+                            Вы открыли <strong>Pull Request</strong>. </li>
+                        <li>К <strong>Pull Request</strong> можно и нужно добавить описание. </li>
+                        <li>добавить в описание <strong>Pull Request</strong> изображение можно просто перетянув его с
+                            компьютера</li>
+                        <li>Если нажать на кнопку <strong>Merge pull request</strong>, <strong>Pull Request</strong>
+                            закроется, при этом
+                            файлы из ветки
+                            разработки переместятся в ту ветку, в которую делаете <strong>Pull Request</strong>.</li>
+                    </ul>
+                    <p class="html-1-desc"><img src="../img/git_github/screen_33.png" alt="Pull Request"></p>
+                    <p class="html-1-desc"><img src="../img/git_github/screen_34.png" alt="Pull Request"></p>
+                    <p class="html-1-desc"><img src="../img/git_github/screen_35.png" alt="Pull Request"></p>
+                    <p class="html-1-desc"><img src="../img/git_github/screen_36.png" alt="Pull Request"></p>
+                    <p class="html-1-desc"><img src="../img/git_github/screen_37.png" alt="Pull Request"></p>
+                    <p class="html-1-desc"><img src="../img/git_github/screen_38.png" alt="Pull Request"></p>
+                    <p class="html-1-desc"><img src="../img/git_github/screen_39.png" alt="Pull Request"></p>
+                </p>
+            </p>
+            <h2>Деплой на gh-pages</h2>
+            <p>Деплой это размещение в интернете вашего проекта - сайта или приложения. Предположим, весь наш проект -
+                файл <strong>index.html</strong> с содержимым</p>
+            <p class="code-post">
+                &lt;h1&gt;Hello world&lt;/h1&gt;
+            </p>
+            <p>При создании в публичном репозитории ветки, GitHub автоматически размещает её содержание в
+                интернете. То есть, если репозиторий публичный, в нём есть ветка, и в корне этой ветки
+                находится файл <strong>index.html</strong>, этот файл уже размещён в интернете. Всё, что осталось
+                сделать, найти ссылку
+                на него.</p>
+            <ol>
+                <li>
+                    <p>Идём в настройки репозитория (шестерёнка с надписью <strong>Settings</strong> справа вверху)</p>
+                    <p class="html-1-desc"><img src="../img/git_github/screen_40.png" alt="GitHub page"></p>
+                </li>
+                <li>
+                    <p>Нажимаем слева на надпись <strong>Pages</strong> (слева)</p>
+                    <p class="html-1-desc"><img src="../img/git_github/screen_41.png" alt="GitHub page">
+                    </p>
+                </li>
+                <li>
+                    <p>Затем выбираем наш <strong>Branch</strong> и нажимаем <strong>save</strong></p>
+                    <p class="html-1-desc"><img src="../img/git_github/screen_42.png" alt="GitHub page">
+                    </p>
+                </li>
+                <li>
+                    <p>После, если подождать 10 минут и зайти на эту страницу заново, то у вас должна появиться ссылка
+                        на вашу страницу в интернете. Каждый раз после обновления файлов в репозитории, надо ждать около
+                        10-15 минут.</p>
+                    <p class="html-1-desc"><img src="../img/git_github/screen_43.png" alt="GitHub page">
+                    </p>
+                </li>
+            </ol>
     </main>
     <footer> Все права защищены &copy; 2022 </footer>
     <script src="../js/script.js"></script>
